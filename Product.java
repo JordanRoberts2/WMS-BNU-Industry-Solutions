@@ -21,6 +21,15 @@ public void setName(String name){
     this.name = name;
 }
 
+// stockLevel method 
+public int stockLevel(){
+    return stockLevel;
+}
+
+public void setStockLevel(int stockLevel){
+    this.stockLevel = stockLevel;
+}
+
 // statement to add stock to existing stock for an item
 
 

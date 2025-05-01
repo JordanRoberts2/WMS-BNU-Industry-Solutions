@@ -12,8 +12,9 @@ class Main {
     
 //Product class output
         Product Toothbrush = new Product();
-        Toothbrush.setName(name:"Toothbrush");
+        Toothbrush.setName("Toothbrush");
         Toothbrush.getName();
-        System.out.println("The name of this product is" + Product.getName);
+        //according to Copolit, The line Toothbrush.getName(); is unnecessary because its return value is not used. It can be safely removed without affecting the program's behavior.
+        System.out.println("The name of this product is " + Toothbrush.getName());
     }
 }
