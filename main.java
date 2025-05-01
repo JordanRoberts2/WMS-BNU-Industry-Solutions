@@ -9,6 +9,11 @@ class Main {
         Ebay.setId(1);
         Ebay.getId();
         System.out.println(Ebay.getId());
+    
+//Product class output
+        Product Toothbrush = new Product();
+        Toothbrush.setName(name:"Toothbrush");
+        Toothbrush.getName();
+        System.out.println("The name of this product is" + Product.getName);
     }
 }
-
