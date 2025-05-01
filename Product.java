@@ -22,7 +22,7 @@ public void setName(String name){
 }
 
 // stockLevel method 
-public int stockLevel(){
+public int getStockLevel(){
     return stockLevel;
 }
 

@@ -15,6 +15,11 @@ class Main {
         Toothbrush.setName("Toothbrush");
         Toothbrush.getName();
         //according to Copolit, The line Toothbrush.getName(); is unnecessary because its return value is not used. It can be safely removed without affecting the program's behavior.
-        System.out.println("The name of this product is " + Toothbrush.getName());
+        System.out.println("The name of this product is " + Toothbrush.getName() + "." + " The number of " + Toothbrush.getName() + " remaining is " + Toothbrush.getStockLevel() + "." );
+
+        //Product stocklevel method output
+        Toothbrush.setStockLevel(10);
+        System.out.println("The name of this product is " + Toothbrush.getName() + "." + " The number of " + Toothbrush.getName() + " remaining is " + Toothbrush.getStockLevel() + "." );
+
     }
 }
