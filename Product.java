@@ -11,8 +11,30 @@ public class Product{
         this.name = name;
         this.id = id;
         this.price = price;
-        this.stockLevel = stockLevel;}
-       
+        this.stockLevel = stockLevel;
+    }
+   
+    public void addStock(int amount) {
+        if(amount > 0) {
+            stockLevel += amount;            
+        System.out.println("Stock level updated. New stock level: " + stockLevel);
+        
+        } else {
+            System.out.println("Invalid amount. Cannot add stock.");
+            return;
+        }
+        
+    }
+
+    public void removeStock(int amount){
+        if (stockLevel >= amount) {
+            stockLevel -= amount;
+            System.out.println("Stock level updated. New stock level: " + stockLevel);
+        } else {
+            System.out.println("Not enough stock to remove. Current stock level: " + stockLevel);
+        }
+    }
+
 //getters and setters
 public String getName(){
     return name;
@@ -29,13 +51,10 @@ public int getStockLevel(){
 public void setStockLevel(int stockLevel){
     this.stockLevel = stockLevel;
 }
-
-public void printStockLevel() {
-    System.out.println("The stock level for this product is: " + stockLevel);
-}
-
 // statement to add stock to existing stock for an item
 
+
+}
 
 // if statement for alerting low stock
 
