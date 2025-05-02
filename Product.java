@@ -30,6 +30,10 @@ public void setStockLevel(int stockLevel){
     this.stockLevel = stockLevel;
 }
 
+public void printStockLevel() {
+    System.out.println("The stock level for this product is: " + stockLevel);
+}
+
 // statement to add stock to existing stock for an item
 
 
