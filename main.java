@@ -10,7 +10,7 @@ class Main {
         Ebay.getId();
         System.out.println(Ebay.getId());
     
-        
+        Order order = new Order("12345", "Toothbrush", "C123", 19.99);
 
 //Product class output
         Product Toothbrush = new Product();
@@ -18,6 +18,6 @@ class Main {
         Toothbrush.setStockLevel(50); // Set stock level
         System.out.println("The name of this product is " + Toothbrush.getName());
         Toothbrush.printStockLevel(); // Print stock level
-        Order.printOrderDetails(); // Print order details
+        order.printOrderDetails(); // Print order details
     }
 }
