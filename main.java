@@ -1,23 +1,38 @@
+import java.util.Scanner;
+
 class Main {
+    private static InventoryManager inventoryManager = new InventoryManager();
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        Supplier Ebay = new Supplier(); 
-        Ebay.setName("Jordan");
-        Ebay.getName();
-        System.out.println(Ebay.getName());
-
-        Ebay.setId(1);
-        Ebay.getId();
-        System.out.println(Ebay.getId());
-    
-        Order order = new Order("12345", "Toothbrush", "C123", 19.99);
-
-//Product class output
-        Product Toothbrush = new Product();
-        Toothbrush.setName("Toothbrush");
-        Toothbrush.setStockLevel(50); // Set stock level
-        System.out.println("The name of this product is " + Toothbrush.getName());
-        Toothbrush.printStockLevel(); // Print stock level
-        order.printOrderDetails(); // Print order details
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.println("Warehouse Management System");
+            System.out.println("1. Add Product");
+            System.out.println("2. Restock Product");
+            System.out.println("3. View Inventory");
+            System.out.println("0. Exit");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // Clear buffer
+ 
+            switch (choice) {
+                case 1 -> addProduct(scanner);
+                //case 2 -> restockProduct(scanner);
+                case 3 -> inventoryManager.printInventory(scanner);
+            }
+        } while (choice != 0);
     }
-}
+    private static void addProduct(Scanner scanner) {
+        System.out.print("Enter product name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter product ID: ");
+        int id = scanner.nextInt();
+        System.out.print("Enter product price: ");
+        int price = scanner.nextInt();
+        System.out.print("Enter stock level: ");
+        int stockLevel = scanner.nextInt();
+        
+        Product product = new Product(name, id, price, stockLevel);
+        System.out.println("Product added: " + product.getName());
+
+        }
+    }

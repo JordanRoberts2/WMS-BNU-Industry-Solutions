@@ -34,6 +34,9 @@ public class Supplier {
         public Supplier(){}
 }
 
-// add method
+// add supplier record 
+
+
+
 // update method
 // delete method
